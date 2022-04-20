@@ -32,4 +32,6 @@ yarn-error.log*
 .vercel
 
 # typescript
+package-lock.json
+yarn.lock
 *.tsbuildinfo
