@@ -1,6 +1,10 @@
 import { Field, Form, Formik, ErrorMessage } from 'formik'
 import { object, string } from 'yup'
+
 import { Layout } from '../../components/layouts/Layout'
+
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { SiGmail } from 'react-icons/si'
 
 const Contact = () => {
 	const contactSchema = object({
@@ -13,7 +17,10 @@ const Contact = () => {
 
 	return (
 		<Layout title='Contact'>
-			<h1 className='mx-auto text-7xl'>contact</h1>
+			<h1 className='mx-auto mt-8 mb-5 text-center capitalize text-7xl'>
+				contact
+			</h1>
+
 			<Formik
 				initialValues={{
 					name: '',
@@ -71,6 +78,16 @@ const Contact = () => {
 					</Form>
 				)}
 			</Formik>
+
+			<div className='my-10 text-6xl text-center capitalize'>
+				<p>or</p>
+			</div>
+
+			<div className='flex text-4xl gap-x-10'>
+				<AiFillGithub />
+				<AiFillLinkedin />
+				<SiGmail />
+			</div>
 		</Layout>
 	)
 }
